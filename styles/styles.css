@@ -1,0 +1,128 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box; 
+}
+
+html, body  { 
+	height: 100%;
+	width: 100%;
+}
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	height: 100%;
+	font-weight: 300;
+	color: #3d3d3d;
+}
+
+.container{
+	display: -webkit-flex;
+  	display: flex;
+  	-webkit-flex-direction: row;
+  	flex-direction: row;
+  	-webkit-flex-wrap: nowrap;
+  	flex-wrap: nowrap;
+  	-webkit-align-items: stretch;
+  	align-items: stretch;
+  	height: 100%;
+  	padding: 20px;
+  	padding-bottom: 70px;
+}
+
+.area{
+	-webkit-flex-grow: 1;
+	flex-grow:1;
+	width: 100%;
+	text-align: center;
+	display: -webkit-flex;
+  	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+  	align-items: center;
+	position: relative;
+	text-align: center;
+	margin: 10px;
+	border: 1px solid #3d3d3d;
+	font-size: 24px;
+	line-height: 40px;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.area .icon{
+	position: absolute;
+	font-size: 50px;
+	color: #fff;
+	z-index: 11;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-webkit-transition: all 400ms;
+    transition: all 350ms;
+}
+
+.area.active .icon{
+	top: 20%;
+	color: #3d3d3d;
+	font-size: 30px;
+}
+
+#area-obanompassa{
+	width: 50%;
+}
+
+#area-obanompassa.active{
+	width: 100%;
+	border-width: 3px;
+}
+
+.area:hover:after, .area:hover:before{
+	background: #2b2b2b;
+}
+
+.area:after, .area:before{
+	content: "";
+	position: absolute;
+	background: #3d3d3d;
+	right: 0;
+	left: 0;
+	height: 50%;
+	z-index: 10;
+	-webkit-transition: background 200ms, top 300ms, bottom 350ms;
+    transition: background 200ms, top 300ms, bottom 350ms;
+}
+
+.area:after{
+	top: 0;
+}
+
+.area:before{
+	bottom: 0;
+}
+
+.area.active:after{
+	top: -100%;
+}
+
+.area.active:before{
+	bottom: -100%;
+}
+
+footer{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	bottom: 20px;
+	text-align: center;
+}
+
+footer a{
+	color: #3d3d3d;
+	font-size: 14px;
+}
