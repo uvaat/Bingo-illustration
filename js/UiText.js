@@ -48,7 +48,7 @@ var UiText = class {
 			if(lettersArray[count] == letter) clearInterval(timer);
 			count++;
 
-		}, Helpers.getRandomInt(50, 200));
+		}, Helpers.getRandomInt(50, 100));
 
 	}
 
